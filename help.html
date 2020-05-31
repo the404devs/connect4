@@ -1,0 +1,149 @@
+<!--Connect 4 in the Java Console
+By Owen and Kevin
+Mr. Krnic
+April 9, 2018
+This is the help page for our Connect 4 game-->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head> 
+		<title> 
+			ICS4U Assignment #3 
+		</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+		<script src="js/scripts.js"></script>
+	</head>
+	<body>
+		<div id="main">
+			<!--Header div, this is the first thing the user sees.-->
+			<div class="header">
+				<h1>
+					Connect Four
+				</h1>
+				<h6 style="color: yellow; font-size: 30px">
+					The Classic Vertical Four-In-A-Row Game
+				</h6> 
+
+				<h6 style="color: yellow; font-size: 30px; padding-top: 20px">
+					Java Edition
+				</h6> 
+				<br>
+			</div>
+
+			<!--Bar with Mario running across the screen-->	
+			<div id="navbar" class="navbar">				
+				<div class="navWrapper">
+					<span class="navButton" style="font-size:30px;cursor:pointer;left: 0;" onclick="location.href = 'http://www.sdsscomputers.com/OwenGoodwin/UNITS/UNIT3';"><i" class="fa fa-laptop"></i></span></a>
+					<span class="navButton" style="font-size:30px;cursor:pointer;left: 70px;" onclick="location.href = 'index.html';"><i" class="fa fa-home"></i></span></a>
+					<span class="navButton" style="font-size:30px;cursor:pointer;left: 140px;" onclick="location.href = 'download.html';"><i" class="fa fa-download"></i></span></a>
+					<span class="navButton" style="font-size:30px;cursor:pointer;left: 210px;" onclick="location.href = 'gallery.html';"><i" class="fa fa-image"></i></span></a>
+					<span class="navButton" style="font-size:30px;cursor:pointer;left: 280px;" onclick="location.href = 'help.html';"><i" class="fa fa-question-circle-o"></i></span></a>
+					<span class="navButton" style="font-size:30px;cursor:pointer;left: 350px;" onclick="alert('peace');"><i" class="fa fa-hand-peace-o"></i></span></a>
+				</div>
+
+
+			</div>
+
+			<br>
+			
+
+			<!--Main page content-->
+			<div class="content">
+				<h2 style="text-align: center">Here are some frequently asked questions about <b>Connect 4: Java Edition</b></h2>
+				<hr>
+				<button class="accordion">"There are no red and yellow pieces. How do I know which pieces are mine?"</button>
+				<div class="panel">
+				  	<p>
+				  		<i class="fa fa-minus"></i> : Player 1
+				  		<br>
+				  		<i class="fa fa-plus"></i> : Player 2/Computer
+				  		<br>
+				  		<i class="fa fa-circle"></i> : Open space
+					</p>
+				</div>
+
+				<!--FAQ #2-->
+				<button class="accordion">"The computer is too tough to beat! Any tips on how to beat it?"</button>
+				<div class="panel">
+				  	<p>
+				  		Yes.
+				  		<br>
+				  		<br>
+				  		But we're not telling.
+				  	</p>
+				</div>
+
+				<!--FAQ #3-->
+				<button class="accordion">"I can't beat the developer's high score of 4 turns! How do you do it?"</button>
+				<div class="panel">
+				  	<p>
+				  		Simple.
+				  		<br>
+				  		<br>
+				  		You can't. Its "Connect Four," so logically you'd have to place at least 4 pieces to win.
+				  	</p>
+				</div>
+
+				<!--FAQ #4-->
+				<button class="accordion">"What happens if you connect 5?"</button>
+				<div class="panel">
+				  	<p>
+				  		The game gets angry and downloads a bunch of viruses, encrypting your computer until you send us 420 bitcoin.
+				  		<br>
+				  		<br>
+				  		<br>
+				  		Just kidding.
+				  		<br>
+				  		Nothing special happens.
+				  	</p>
+				</div>	
+
+				<!--FAQ #5-->
+				<button class="accordion">"Who made this?"</button>
+				<div class="panel">
+					<p>
+				  		Owen Goodwin and Kevin Cacorovski did.
+				  	</p>
+				</div>	
+
+				<!--FAQ #6-->
+				<button class="accordion">"Question?"</button>
+				<div class="panel">
+					<p>
+				  		Answer.
+				  	</p>
+				</div>					
+
+				<script>
+					//This script block is what allows the panels to expand and retract smoothly.
+			        var acc = document.getElementsByClassName("accordion");
+			        var i;
+
+			        for (i = 0; i < acc.length; i++) {
+			          acc[i].addEventListener("click", function() {
+			            this.classList.toggle("open");
+			            var panel = this.nextElementSibling;
+			            if (panel.style.maxHeight){
+			              panel.style.maxHeight = null;
+			            } else {
+			              panel.style.maxHeight = panel.scrollHeight + "px";
+			            } 
+			          });
+			        }
+		        </script>
+			</div>			
+
+			<!--Standard footer for all pages, with some navigation buttons as well.-->
+			<div class="footer">
+				<p> 					
+					This page was last updated on <b>04/07/18 at 14:47</b>
+				</p>
+			</div>
+		</div>
+	</body>
+</html>

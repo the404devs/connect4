@@ -1,0 +1,144 @@
+<!--Connect 4 in the Java Console
+By Owen and Kevin
+Mr. Krnic
+April 9, 2018
+This is the screenshots page for our Connect 4 game-->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head> 
+		<title> 
+			ICS4U Assignment #3 
+		</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+		<script src="js/scripts.js"></script>
+	</head>
+	<body>
+		<div id="main">
+			<!--Header div, this is the first thing the user sees.-->
+			<div class="header">
+				<h1>
+					Connect Four
+				</h1>
+				<h6 style="color: yellow; font-size: 30px">
+					The Classic Vertical Four-In-A-Row Game
+				</h6> 
+
+				<h6 style="color: yellow; font-size: 30px; padding-top: 20px">
+					Java Edition
+				</h6> 
+				<br>
+			</div>
+
+			<!--Bar with Mario running across the screen-->	
+			<div id="navbar" class="navbar">				
+				<div class="navWrapper">
+					<span class="navButton" style="font-size:30px;cursor:pointer;left: 0;" onclick="location.href = 'http://www.sdsscomputers.com/OwenGoodwin/UNITS/UNIT3';"><i" class="fa fa-laptop"></i></span></a>
+					<span class="navButton" style="font-size:30px;cursor:pointer;left: 70px;" onclick="location.href = 'index.html';"><i" class="fa fa-home"></i></span></a>
+					<span class="navButton" style="font-size:30px;cursor:pointer;left: 140px;" onclick="location.href = 'download.html';"><i" class="fa fa-download"></i></span></a>
+					<span class="navButton" style="font-size:30px;cursor:pointer;left: 210px;" onclick="location.href = 'gallery.html';"><i" class="fa fa-image"></i></span></a>
+					<span class="navButton" style="font-size:30px;cursor:pointer;left: 280px;" onclick="location.href = 'help.html';"><i" class="fa fa-question-circle-o"></i></span></a>
+					<span class="navButton" style="font-size:30px;cursor:pointer;left: 350px;" onclick="alert('peace');"><i" class="fa fa-hand-peace-o"></i></span></a>
+				</div>
+
+
+			</div>
+
+			<br>
+			
+
+			<!--Main page content-->
+			<div class="content">
+				<h2 style="text-align: center">Here are some screenshots of <b>Connect 4: Java Edition</b></h2>
+				<hr>
+				<div class="quiz-container">
+					<!-- Each div with the class "quizSlide" represents one of the 6 pages-->
+					<div class="quizSlide fade">
+						<img src="images/screen1.png">
+						<h4>Main Menu</h4>
+					</div>
+
+					<div class="quizSlide fade">
+						<img src="images/screen2.png">
+						<h4>The game screen</h4>
+					</div>
+
+					<div class="quizSlide fade">
+						<img src="images/screen3.png">
+						<h4>An intense game, that unfortunately ended in a draw</h4>
+					</div>
+
+					<div class="quizSlide fade">
+						<img src="images/screen4.png">
+						<h4>The highscores list. I bet you can't beat my record of 4!</h4>
+					</div>
+					
+  					<!-- Next and previous buttons -->
+  					<div class="arrowWrapper">
+	  					<a id="leftArrow" class="prev" onclick="plusSlides(-1)">&#10094;</a>
+	  					<a id="rightArrow" class="next" onclick="plusSlides(1)">&#10095;</a>
+  					</div>
+				</div>
+				<!-- The dots/circles at the bottom, showing the active page
+			 	Clickable to navigate between pages.-->
+				<div style="text-align:center">
+				  	<span class="dot" onclick="currentSlide(1)"></span> 
+				  	<span class="dot" onclick="currentSlide(2)"></span> 
+				  	<span class="dot" onclick="currentSlide(3)"></span> 
+				  	<span class="dot" onclick="currentSlide(4)"></span> 
+
+				</div>
+			</div>
+
+			<script type="text/javascript">
+				/*This script block is quite similar to the slideshow on the homepage, 
+				becasue that's actually what it's based off of.
+				Instead of changing slide after a few seconds though, this waits until the user has 
+				clicked either the arrows at the side or buttons at the bottom.*/
+				var slideIndex = 1;
+				showSlides(slideIndex);
+
+				// Next/previous controls
+				function plusSlides(n) {
+				  showSlides(slideIndex += n);
+				}
+
+				// Dots controls
+				function currentSlide(n) {
+				  showSlides(slideIndex = n);
+				}
+
+				function showSlides(n) {
+				  var i;
+				  var slides = document.getElementsByClassName("quizSlide");
+				  var dots = document.getElementsByClassName("dot");
+				  if (n > slides.length) {slideIndex = 1} 
+				  if (n < 1) {slideIndex = slides.length}
+				  for (i = 0; i < slides.length; i++) {
+				      slides[i].style.display = "none"; 
+				  }
+				  for (i = 0; i < dots.length; i++) {
+				      dots[i].className = dots[i].className.replace(" active", "");
+				  }
+				  slides[slideIndex-1].style.display = "block"; 
+				  dots[slideIndex-1].className += " active";
+				  window.scrollTo(0, 0);
+				}
+			</script>		
+
+			<!--Standard footer for all pages, with some navigation buttons as well.-->
+			<div class="footer">
+				<p> 					
+					This page was last updated on <b>04/07/18 at 14:47</b>
+				</p>
+			</div>
+		</div>
+	</body>
+</html>
+
+

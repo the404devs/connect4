@@ -1,0 +1,1 @@
+connect4.bat will run the .jar in cmd. The .jar contains the .class and .java files
